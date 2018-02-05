@@ -63,7 +63,7 @@ const ShowCountries = ({countries, handleClickName}) => {
 } else if (countries.length > 0) {
     return (
       <div>
-        {countries.map(c => <div key={c.name} onClick={handleClickName(c.name)}>{c.name}</div>)}
+        {countries.map(maa => <div key={maa.name} onClick={handleClickName(maa.name)}>{maa.name}</div>)}
       </div>
     )
 }
