@@ -39,7 +39,7 @@ class App extends React.Component {
     return (
       <div>
         <ShowSearch countries={this.state.countries} filter={this.state.filter} handleFilterChange={this.handleFilterChange} />
-        <ShowCountries countries={this.state.countries.filter(c => c.name.toLowerCase().includes(this.state.filter.toLowerCase()))} handleClickName={this.handleClickName} />
+        <ShowCountries countries={this.state.countries.filter(maat => maat.name.toLowerCase().includes(this.state.filter.toLowerCase()))} handleClickName={this.handleClickName} />
       </div>
     )
   }
@@ -63,7 +63,7 @@ const ShowCountries = ({countries, handleClickName}) => {
 } else if (countries.length > 0) {
     return (
       <div>
-        {countries.map(c => <div key={c.name} onClick={handleClickName(c.name)}>{c.name}</div>)}
+        {countries.map(maa => <div key={maa.name} onClick={handleClickName(maa.name)}>{maa.name}</div>)}
       </div>
     )
 }
